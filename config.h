@@ -68,8 +68,8 @@ static const struct arg args[] = {
 	{ cpu_perc, " cpu %s%% |", NULL },
 	{ ram_used, "ram %s |", NULL },
 	{ disk_free, " disk %s |", "/" },
-	/* { netspeed_rx, " %s  ", "enp27s0" },
-	{ netspeed_tx, " %s  ", "enp27s0" }, */
-	{ run_command, " vol %s |", "pamixer --get-volume-human" }, 
+	/*{ netspeed_rx, " %s  ", "enp27s0" },
+	{ netspeed_tx, " %s  ", "enp27s0" },*/
+	{ run_command, " vol %s |", "amixer sget master ] awk -F\"[][]\" '/%/ { print $2 }' ] head -n1" }, 
 	{ datetime, " %s ", "%a %m/%d/%y |  %I:%M:%S %P" },
 };
